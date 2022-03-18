@@ -1,0 +1,36 @@
+1. Create "src" folder in main folder.
+2. Create "public" folder in main folder.
+3. Create "scripts" folder in "public" folder.
+4. Create "index.html" file in "public" folder.
+5. Create "App.js" file in "scripts" folder.
+6. Create "App.js" file again in "src" folder.
+
+After that we will work in Terminal
+7. npm i -g live-server.
+8. npm list -g --depth 0.
+9.npm init -y (Downloading "package.json" file).  
+10.Create div in html file with Id "root".
+11. Go to "Reactjs.org" >> CDN Links >> and copy Development Js files and paste into your html file.
+12. Call "app.js" file in your html file which situated in "scripts" folder.
+13. Go to "Babeljs.io" >> Setup >> CLI shell copy it to terminal 
+    npm install --save-dev @babel/core @babel/cli (We download "node-modules" folder and "pack-lock.json" file)
+
+Prepare Converter
+
+14. Go to "Babeljs.io" again >> Docs>> 
+   1) Copy Preset npm install --save-dev @babel/preset-env
+   2) Copy React npm install --save-dev @babel/preset-react
+
+15. Create ".babelrc" file and and copy this 
+ {"presets": ["@babel/preset-env","@babel/preset-react"]} into ".babelrc" file
+
+16. Go to "package.json" file and copy this
+"start": "live-server public",
+    "babel": "npx babel src/app.js --out-file=public/scripts/app.js --watch"
+    into the scripts area after remove everything here
+
+Finally 
+
+ We open 2 Terminals below
+ 1st Terminal We Write : npm run babel  (This code converts our code from ES 6 7 To ES 5)
+ 2nd Terminal We Write : npm run start or npm start
