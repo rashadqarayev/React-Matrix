@@ -1,0 +1,84 @@
+1. Create "dist" folder.
+2. Create "src" folder.
+3. Create "app.js" file in "src" folder
+4 Create "index.html" in "dist" folder
+5. Go to Terminal and type "npm init -y" to create "package.json" file
+6. Go to "Babeljs.io" and Install CLI (npm install --save-dev @babel/core @babel/cli) by Terminal. (downloading "node_modules" folder)
+7. Copy Preset and React and Install  by Terminal
+8. Write "npm i react react-dom" to Terminal
+9. 
+   1)For installing WebPack write "npm i webpack --save-dev".
+   2) Write "npm i webpack-cli --save-dev".
+ We Use WebPack for calling photos musics videos to show in our Website.
+
+10. Create "webpack.config.js" file
+11. Copy this
+
+    const path = require('path');
+
+module.exports = {
+    entry: './src/app.js',
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/
+            },
+            {
+                test: /\.scss$/,
+                use: [ 'style-loader','css-loader', 'sass-loader']
+            }
+        ]
+    }
+
+}
+    into "webpack.config.js" file
+
+12. Install Babel Loader "npm i babel-loader" by this code
+13. Installing CSS CLI
+
+    # CSS CLI
+
+```bash
+   1)npm i css-loader --save-dev
+   2)npm i style-loader --save-dev
+   3)npm i css-loader style-loader --save-dev
+   4)npm i sass-loader --save-dev
+   5)npm i node-sass
+   6)npm i bootstrap
+
+14. Copy this 
+"scripts": {
+    "webpack-build": "webpack --mode production",
+    "start": "live-server dist"
+  },
+     into the "package.json" file
+
+15. We change "webpack-build" name to "wb" and type "npm run wb" and we must get "bundle.js" file in "dist" folder.
+
+16. Now we will use "app.js" file which situated in "src" folder.
+   Create ".babelrc" file again and copy presets in it
+17. Write codes
+   1)import React from "react";
+   2)import ReactDOM from "react-dom";
+   3) Write this:  ReactDOM.render(<App/>, document.querySelector("#root"))
+
+   4)    class App extends React.Component{
+
+    render(){
+        return(
+           
+        )
+    }
+}
+}
+18. Type "npm run wb" and get "License.txt" file.
+
+19.Create "sass" folder and scss file in it.
+and Import to "App.js" 
+ We must download file loader npm to get img audio video files  $ npm install file-loader --save-dev
