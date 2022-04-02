@@ -1,0 +1,18 @@
+API- Application Programming Interface;
+Why we need this?
+
+Let we have one database which made with SQL
+
+What is DataBase?
+     
+     We have Desktop App - Made by C#;
+     
+     We have Web App - Made by PHP;
+     
+     We have Android App - Made by JAVA;
+
+API - Is a bridge which help us to transfer information from this language to another language. Collects our informations and tranfering it when we need
+
+Axios - We use it to get axios
+
+We use get() method for getting informations;

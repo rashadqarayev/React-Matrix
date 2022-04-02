@@ -1,0 +1,35 @@
+for create react 
+
+npx create-react-app "appname";
+
+and run npm start;
+
+we remove all things in public file except index.html;
+we remove all things in src file except index.js;
+
+we remove last 3 row from above index.js
+and
+
+We must make file like this 
+
+   import React, { Component } from 'react';
+   import ReactDOM from 'react-dom';
+
+   class App extends Component{
+  render(){
+  return(
+    <div>
+      <h1>Hello</h1>
+    </div>
+  )
+  }
+}
+
+ReactDOM.render(<App />,document.getElementById('root')
+);
+
+
+
+react-dom called virtual dom;
+UI user interface
+UX user experience;
